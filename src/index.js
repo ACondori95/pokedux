@@ -8,7 +8,10 @@ import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const store = createStore(pokemonReducer);
+const store = createStore(
+  pokemonReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 root.render(
   <React.StrictMode>
